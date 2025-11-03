@@ -47,6 +47,7 @@ jobs:
             --build-arg NAVER_CLIENT_SECRET=${{ secrets.NAVER_CLIENT_SECRET }} \
             --build-arg SMS_ACCESS_KEY=${{ secrets.SMS_ACCESS_KEY }} \
             --build-arg SMS_SECRET_ACCESS_KEY=${{ secrets.SMS_SECRET_ACCESS_KEY }} \
+            --build-arg MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }} \
           -t crew-station .
           docker run -d -p 80:10000 --name crew-station \
             -e EC2_HOST=${{ secrets.EC2_HOST }} \
@@ -63,6 +64,7 @@ jobs:
             -e NAVER_CLIENT_SECRET=${{ secrets.NAVER_CLIENT_SECRET }} \
             -e SMS_ACCESS_KEY=${{ secrets.SMS_ACCESS_KEY }} \
             -e SMS_SECRET_ACCESS_KEY=${{ secrets.SMS_SECRET_ACCESS_KEY }} \
+            -e MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }} \
             -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
             crew-station
             
