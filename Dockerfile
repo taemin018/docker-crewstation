@@ -42,7 +42,7 @@ ARG SMS_SECRET_ACCESS_KEY
 ENV SMS_SECRET_ACCESS_KEY=${SMS_SECRET_ACCESS_KEY}
 
 # 작업 디렉토리 설정
-WORKDIR /crew-station-back
+WORKDIR /app
 
 # Gradle wrapper 및 프로젝트 파일 복사
 # COPY <src> <dest>
@@ -60,10 +60,10 @@ FROM eclipse-temurin:17-jre
 ENV TZ=Asia/Seoul
 
 # JAR 복사 (위 단계에서 생성된 JAR)
-COPY --from=build /crew-station-back/build/libs/crew-station-back-0.0.1-SNAPSHOT.jar crew-station-back.jar
+COPY --from=build /app/build/libs/crew-station-back-0.0.1-SNAPSHOT.jar crew-station-back.jar
 
 # 포트 오픈 (Spring Boot 기본 포트)
 EXPOSE 10000
 
 # 실행 명령
-ENTRYPOINT ["java", "-jar", "crew-station-back.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
