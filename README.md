@@ -1,4 +1,4 @@
-## 🔥 EC2 CI/CD 배포 🔥
+## 🔥 EC2 CI/CD 자동화 배포 🔥
 
 ### 📌 Overview
 
