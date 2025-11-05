@@ -71,10 +71,11 @@ docker images
 ```
 ### 2. 결과 이미지
 > docker ps 결과
->![도커 ps 결과](https://velog.velcdn.com/images/alzkdpf000/post/2894e962-2e3b-4e5b-8340-8efe8e355ea8/image.png)
+
 
 > docker images 결과
->![도커 이미지 출력](https://velog.velcdn.com/images/alzkdpf000/post/a00bb0c5-fcda-4177-861d-6e4b16f65c73/image.png)
+
+
 
 ### 3. 도커 명령어 모음
 | 명령어 | 설명 |
