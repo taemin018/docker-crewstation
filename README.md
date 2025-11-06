@@ -95,14 +95,26 @@ docker images
 
 ## 🧩 troubleshooting
 
-<img width="943" height="554" alt="스크린샷 2025-11-06 오후 5 18 43" src="https://github.com/user-attachments/assets/85e5b5b0-027e-4b65-aff3-a6d9d57e6ca6" />
+<img width="897" height="503" alt="스크린샷 2025-11-06 오후 5 30 22" src="https://github.com/user-attachments/assets/853ba1bf-c4db-44ab-b00c-13d4a2e6260a" />
 
-
+- build를 하는 도중에 오류가 나서 build 실패를 했다.
 
 ⚒️ 해결방안
 
+- workflow file에서 MAIL_PASSWORD 부분이 빈문자열이 합쳐져 있어서 build가 실패를 했다.
+  
+      --build-arg MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}
+      
+      -e MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" 
 
+- 이부분에서 빈문자열도 포함하게 하기 위해서 아래처럼 변경을 한 후 build 오류가 해결되었다.
 
+      --build-arg MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" \
+
+      -e MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" \
+
+- ✅ build 성공 결과 
+<img width="943" height="554" alt="스크린샷 2025-11-06 오후 5 39 53" src="https://github.com/user-attachments/assets/2f959791-8541-445c-a2a5-e0b5d36c37c4" />
 
 
 
