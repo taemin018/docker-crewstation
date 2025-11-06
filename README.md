@@ -93,6 +93,13 @@ docker images
 
 <br>  
 
+## 🧩 troubleshooting
+
+<img width="943" height="554" alt="스크린샷 2025-11-06 오후 5 18 43" src="https://github.com/user-attachments/assets/85e5b5b0-027e-4b65-aff3-a6d9d57e6ca6" />
+
+
+
+⚒️ 해결방안
 
 
 
