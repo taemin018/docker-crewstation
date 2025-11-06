@@ -107,7 +107,7 @@ docker images
       
       -e MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" 
 
-- 이부분에서 빈문자열도 포함하게 하기 위해서 아래처럼 변경을 한 후 build 오류가 해결되었다.
+- 이부분에서 빈문자열도 포함하게 하기 위해서 아래처럼 변경(secrets.MAIL_PASSWORD부분을 전체 ""로 감싼다.)을 한 후 build 오류가 해결되었다.
 
       --build-arg MAIL_PASSWORD="${{ secrets.MAIL_PASSWORD }}" \
 
