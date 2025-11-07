@@ -97,7 +97,7 @@ docker images
 
 <img width="897" height="503" alt="스크린샷 2025-11-06 오후 5 30 22" src="https://github.com/user-attachments/assets/853ba1bf-c4db-44ab-b00c-13d4a2e6260a" />
 
-- build를 하는 도중에 오류가 나서 build 실패를 했다.
+- build를 하는 도중에 오류가 발생, build 실패를 했다.
 
 ⚒️ 해결방안
 
